@@ -5,17 +5,22 @@ public class Calc {
 
         if (exp.isBlank()) return 0;
 
-        final boolean isPlus = exp.contains("+");
+        final String[] expBits = exp.split(" ");
 
-        final String divideSign = isPlus ? "\\+" : "-";
+        final String sign = expBits[1];
 
-        final String[] expBits = exp.split(" " + divideSign + " ");
 
         final int num1 = Integer.parseInt(expBits[0]);
-        final int num2 = Integer.parseInt(expBits[1]);
+        final int num2 = Integer.parseInt(expBits[2]);
 
-        if (isPlus) return num1 + num2;
-        else return num1 - num2;
+        switch (sign) {
+            case "+":
+                return num1 + num2;
+            case "-":
+                return num1 - num2;
+            default:
+                return num1 * num2;
+        }
 
 
     }
