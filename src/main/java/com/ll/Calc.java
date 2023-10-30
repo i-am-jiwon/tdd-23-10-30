@@ -1,11 +1,10 @@
 package com.ll;
 
 public class Calc {
-    public static int run(String math) {
+    public static int run(String exp) {
 
-//        String[] nums = math.split("\\*");
-//        nums[0] = nums[0]
 
-        return 1;
+
+        return 0;
     }
 }
