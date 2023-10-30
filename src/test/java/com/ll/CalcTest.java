@@ -21,8 +21,15 @@ public class CalcTest {
     }
 
     @Test
-    @DisplayName("10 - 10 = 0")
+    @DisplayName("10 + 20 = 30")
     void t3(){
+        int rs = Calc.run("10 + 20");
+        assertThat(rs).isEqualTo(30);
+    }
+
+    @Test
+    @DisplayName("10 - 10 = 0")
+    void t4(){
         int rs = Calc.run("10 - 10");
         assertThat(rs).isEqualTo(0);
     }
